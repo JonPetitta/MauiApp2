@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp2"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutIcon="circle_hamburger_black.png"
+    Title="MauiApp2">
+
+    <!--I could not get FlyoutBackgroundColor to work...
+    Had to overwrite the internal template to get something to work-->
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="0.2*,0.8*" BackgroundColor="Green">
+                <Image Source="{Binding FlyoutIcon}"
+                       Margin="5"
+                       HeightRequest="45"
+                       BackgroundColor="Green"/>
+                <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center"
+                       BackgroundColor="Green"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+    <!--
+    Depending on what is put in FlyoutIcon it will just be white
+    for both the shell flyouticon as well as the flyoutitem icon property
+    the xaml image element renders as expected
+    
+    1 chb png
+    flyouticon/itemicon White
+    xaml image fine
+    FlyoutIcon="circle_hamburger_black.png"
+    
+    2 chfb svg
+    flyouticon/itemicon White
+    xaml image fine
+    FlyoutIcon="circle_hamburger_fill_black.png"
+    
+    3 chfg svg
+    flyouticon/itemicon White
+    xaml image fine
+    FlyoutIcon="circle_hamburger_fill_gray.png"
+    
+    4 hfp svg
+    flyouticon/itemicon White
+    xaml image fine
+    FlyoutIcon="hamburger_fill_purple.png"
+    
+    5 i8hsbfr svg
+    flyouticon/itemicon White
+    xaml image fine    
+    FlyoutIcon="icons8_hamburger_stroke_black_fill_red.png"
+    -->
+
+    <FlyoutItem Title="1 chb png" Icon="circle_hamburger_black.png" >
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />    
+    </FlyoutItem>
+    <FlyoutItem Title="2 chfb svg" Icon="circle_hamburger_fill_black.png" >
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="3 chfg svg" Icon="circle_hamburger_fill_gray.png" >
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="4 hfp svg" Icon="hamburger_fill_purple.png" >
+        <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="5 i8hsbfr svg" Icon="icons8_hamburger_stroke_black_fill_red.png" >
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+
+</Shell>

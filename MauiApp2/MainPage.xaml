@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <VerticalStackLayout>
+                <Label Text="1 chb png" />
+                <Image
+                    Source="circle_hamburger_black.png"
+                    Aspect="AspectFit" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="2 chfb svg" />
+                <Image
+                    Source="circle_hamburger_fill_black.png"
+                    Aspect="AspectFit" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="3 chfg svg" />
+                <Image
+                    Source="circle_hamburger_fill_gray.png"
+                    Aspect="AspectFit" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="4 hfp svg" />
+                <Image
+                    Source="hamburger_fill_purple.png"
+                    Aspect="AspectFit" />
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label Text="5 i8hsbfr svg" />
+                <Image
+                    Source="icons8_hamburger_stroke_black_fill_red.png"
+                    Aspect="AspectFit" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
