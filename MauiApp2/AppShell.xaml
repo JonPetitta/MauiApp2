@@ -6,9 +6,11 @@
     xmlns:local="clr-namespace:MauiApp2"
     Shell.FlyoutBehavior="Flyout"
     FlyoutIcon="circle_hamburger_black.png"
+    FlyoutBackgroundColor="Green"
     Title="MauiApp2">
 
-    <!--I could not get FlyoutBackgroundColor to work...
+    <!--I could not get FlyoutBackgroundColor to work in styles
+    seems it works when you set it directly above...
     Had to overwrite the internal template to get something to work-->
     <Shell.ItemTemplate>
         <DataTemplate>
